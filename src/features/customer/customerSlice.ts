@@ -34,6 +34,6 @@ export const customerSlice = createSlice({
     }
 });
 
-export const {addCustomer} = customerSlice.actions;
+export const {addCustomer, addFood} = customerSlice.actions;
 
 export default customerSlice.reducer;

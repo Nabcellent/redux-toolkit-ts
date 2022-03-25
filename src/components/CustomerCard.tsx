@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {useDispatch} from 'react-redux';
+import {addFood} from '../features/customer/customerSlice';
 
 interface CustomerCartTypes {
     id: string;
@@ -7,6 +9,17 @@ interface CustomerCartTypes {
 }
 
 const CustomerCard = ({id, name, food}: CustomerCartTypes) => {
+    const dispatch = useDispatch();
+    const [foodValue, setFoodValue] = useState("");
+
+    const handleAddFood = () => {
+        if(!foodValue) return;
+
+        dispatch(addFood({id, food: foodValue}))
+
+        setFoodValue("")
+    }
+
     return (
         <div className="customer-food-card-container">
             <p>{name}</p>
@@ -15,8 +28,8 @@ const CustomerCard = ({id, name, food}: CustomerCartTypes) => {
                     {food.map((food, i) => <p key={i}>{food}</p>)}
                 </div>
                 <div className="customer-food-input-container">
-                    <input/>
-                    <button>Add</button>
+                    <input value={foodValue} onChange={e => setFoodValue(e.target.value)}/>
+                    <button onClick={handleAddFood}>Add</button>
                 </div>
             </div>
         </div>
