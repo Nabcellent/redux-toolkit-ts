@@ -2766,6 +2766,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uuid@npm:^8":
+  version: 8.3.4
+  resolution: "@types/uuid@npm:8.3.4"
+  checksum: 6f11f3ff70f30210edaa8071422d405e9c1d4e53abbe50fdce365150d3c698fe7bbff65c1e71ae080cbfb8fded860dbb5e174da96fdbbdfcaa3fb3daa474d20f
+  languageName: node
+  linkType: hard
+
 "@types/ws@npm:^8.2.2":
   version: 8.5.3
   resolution: "@types/ws@npm:8.5.3"
@@ -10288,11 +10295,13 @@ __metadata:
     "@types/react": ^16.14.24
     "@types/react-dom": ^16.9.14
     "@types/react-redux": ^7.1.23
+    "@types/uuid": ^8
     react: ^17.0.2
     react-dom: ^17.0.2
     react-redux: ^7.2.6
     react-scripts: 5.0.0
     typescript: ~4.1.5
+    uuid: ^8.3.2
   languageName: unknown
   linkType: soft
 
